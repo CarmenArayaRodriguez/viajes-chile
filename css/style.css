@@ -113,14 +113,55 @@ hr {
   margin-top: 30px;
 }
 
+.card {
+  background-color: #449CA6;
+}
+
 .card-img-top {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
+.card-body {
+  color: white;
+}
+
 #contacto {
-  background-color: blueviolet;
+  background-color: black;
+}
+
+#contacto h2 {
+  color: white;
+}
+
+label {
+  color: white
+}
+
+.btn-personalizado {
+  background-color: #449CA6;
+  /* Azul */
+  color: white;
+  /* Texto blanco */
+  border: none;
+  /* Sin bordes */
+  padding: 10px 20px;
+  /* Espaciado interno */
+  text-align: left;
+  /* Alineación del texto */
+  display: inline-block;
+  /* Permite la alineación */
+  margin: 10px 0;
+  /* Margen para no pegarse a otros elementos */
+  cursor: pointer;
+  /* Cambia el cursor para indicar clic */
+}
+
+/* Estilo para el hover (cuando el mouse está encima) */
+.btn-personalizado:hover {
+  background-color: #35797B;
+  /* Un azul más oscuro para el efecto hover */
 }
 
 /* Media Queries */
