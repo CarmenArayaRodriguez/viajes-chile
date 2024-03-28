@@ -68,8 +68,31 @@ section h1 {
   margin-top: 0;
 }
 
+#carrusel {
+  min-height: auto;
+}
+
 #quienes-somos {
-  background-color: red;
+  background-color: black;
+  color: white;
+  min-height: auto;
+}
+
+.centro {
+  text-align: center;
+}
+
+.icono-con-fondo {
+  background-color: #449CA6;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+.icono-con-fondo i {
+  width: auto;
+  height: auto;
 }
 
 #destacados {
@@ -80,10 +103,24 @@ section h1 {
   background-color: blueviolet;
 }
 
+/* Media Queries */
+
 /* Ajuste cuando el navbar está expandido en móviles */
 @media (max-width: 768px) {
   body.navbar-expanded section::before {
     height: 190px;
     margin-top: 5px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #quienes-somos .col-md-4 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .d-none.d-md-block {
+    display: none !important;
   }
 }
