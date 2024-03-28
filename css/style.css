@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+nav.navbar.custom-navbar {
+  background-color: #449CA6 !important;
+}
+
+section {
+  min-height: 100vh;
+}
+
+/* Ajuste de Espacio para Secciones con Barra de Navegación Fija */
+section::before {
+  content: "";
+  display: block;
+  height: 70px;
+  margin-top: -70px;
+  visibility: hidden;
+}
+
+section {
+  padding-top: 70px;
+}
+
+section h1 {
+  margin-top: 0;
+}
+
+
+#carrusel {
+  background-color: rgb(0, 234, 255);
+}
+
+#quienes-somos {
+  background-color: red;
+}
+
+#destacados {
+  background-color: bisque;
+}
+
+#contacto {
+  background-color: blueviolet;
+}
+
+/* Ajuste cuando el navbar está expandido en móviles */
+@media (max-width: 768px) {
+  body.navbar-expanded section::before {
+    height: 190px;
+    margin-top: 5px;
+  }
+}
