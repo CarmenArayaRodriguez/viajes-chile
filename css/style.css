@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #449CA6;
+  background-color: black;
 }
 
 .roboto-regular {
@@ -78,8 +78,16 @@ section h1 {
   min-height: auto;
 }
 
+
 .centro {
   text-align: center;
+}
+
+hr {
+  width: 90%;
+  margin: auto;
+  border-top: 1px solid white;
+  padding-bottom: 10px;
 }
 
 .icono-con-fondo {
@@ -96,7 +104,19 @@ section h1 {
 }
 
 #destacados {
-  background-color: bisque;
+  background-color: black;
+  min-height: auto;
+
+}
+
+#destacados h2 {
+  margin-top: 30px;
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 #contacto {
