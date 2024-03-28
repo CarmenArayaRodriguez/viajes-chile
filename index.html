@@ -91,7 +91,7 @@
     <!-- Quíénes somos -->
     <section id="quienes-somos" class="d-none d-md-block">
       <div class="container">
-        <h2 class="centro mb-3 d-none d-md-block">¿Quiénes somos?</h2>
+        <h2 class="roboto-regular centro mb-3 d-none d-md-block">¿Quiénes somos?</h2>
         <hr>
         <div class="row">
           <div class="col-md-4 d-none d-md-block">
@@ -193,8 +193,28 @@
       </div>
     </section>
 
-    <section id="contacto">
-      <h1>Contacto</h1>
+    <section id="contacto" class="container">
+      <h2 class="roboto-regular text-center my-4">Contacto</h2>
+      <hr>
+      <form action="">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre" />
+        </div>
+        <div class="mb-3">
+          <label for="asunto" class="form-label">Asunto</label>
+          <input type="text" class="form-control" id="asunto" placeholder="Asunto" />
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="3" placeholder="Mensaje"></textarea>
+        </div>
+        <div class="my-3 text-start">
+          <button type="submit" class="btn btn-personalizado text-light btn-enviar">
+            Enviar
+          </button>
+        </div>
+      </form>
     </section>
   </main>
 
