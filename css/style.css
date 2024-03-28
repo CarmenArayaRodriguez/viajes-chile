@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+nav.navbar.custom-navbar {
+  background-color: #449CA6 !important;
+}
+
+
+header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+section {
+  min-height: 100vh;
+}
+
+/* Ajuste de Espacio para Secciones con Barra de Navegación Fija */
+section::before {
+  content: "";
+  display: block;
+  height: 70px;
+  margin-top: -70px;
+  visibility: hidden;
+}
+
+section {
+  padding-top: 70px;
+}
+
+section h1 {
+  margin-top: 0;
+}
+
+#carrusel {
+  min-height: auto;
+}
+
+#quienes-somos {
+  background-color: black;
+  color: white;
+  min-height: auto;
+}
+
+
+.centro {
+  text-align: center;
+}
+
+hr {
+  width: 90%;
+  margin: auto;
+  border-top: 1px solid white;
+  padding-bottom: 10px;
+}
+
+.icono-con-fondo {
+  background-color: #449CA6;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+.icono-con-fondo i {
+  width: auto;
+  height: auto;
+}
+
+#destacados {
+  background-color: black;
+  min-height: auto;
+
+}
+
+#destacados h2 {
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #449CA6;
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  color: white;
+}
+
+#contacto {
+  background-color: black;
+}
+
+#contacto h2 {
+  color: white;
+}
+
+label {
+  color: white
+}
+
+.btn-personalizado {
+  background-color: #449CA6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  display: inline-block;
+  margin: 10px 0;
+  cursor: pointer;
+
+}
+
+.btn-personalizado:hover {
+  background-color: #35797B;
+}
+
+.footer-social {
+  background-color: #449CA6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #dddddd;
+}
+
+.fa-brands {
+  font-size: 1.5rem;
+
+}
+
+body .tooltip-inner {
+  background-color: black !important;
+}
+
+body .tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: black !important;
+}
+
+
+/* Media Queries */
+
+/* Ajuste cuando el navbar está expandido en móviles */
+@media (max-width: 768px) {
+  body.navbar-expanded section::before {
+    height: 190px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #quienes-somos .col-md-4 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .d-none.d-md-block {
+    display: none !important;
+  }
+}
