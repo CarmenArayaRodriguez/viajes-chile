@@ -196,7 +196,7 @@
     <section id="contacto" class="container">
       <h2 class="roboto-regular text-center my-4">Contacto</h2>
       <hr>
-      <form action="">
+      <form id="formulario-contacto">
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>
           <input type="text" class="form-control" id="nombre" placeholder="Nombre" />
@@ -210,7 +210,7 @@
           <textarea class="form-control" id="mensaje" rows="3" placeholder="Mensaje"></textarea>
         </div>
         <div class="my-3 text-start">
-          <button type="submit" class="btn btn-personalizado text-light btn-enviar">
+          <button id="enviar" type="button" class="btn btn-personalizado text-light btn-enviar">
             Enviar
           </button>
         </div>
@@ -222,13 +222,71 @@
   <footer class="footer-social">
     <h5 clas="roboto-light">VIAJES CHILE</h5>
     <div class="social-links">
-      <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-      <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+        title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><i
+          class="fa-brands fa-twitter"></i></a>
+      <a href="https://facebook.com/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+        title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+        title="Tik Tok"><i class="fa-brands fa-tiktok"></i></a>
     </div>
   </footer>
 
+  <!-- Modal -->
+  <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalConfirmacionLabel">Confirmación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Tu mensaje ha sido enviado exitosamente. ¡Gracias por contactarnos!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Tooltips -->
+  <script>
+    $(document).ready(function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl, {
+          template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+      });
+    });
+  </script>
+
+  <!-- Script de JQuery para el botón de envio del formulario de contacto -->
+  <script>
+    $(document).ready(function () {
+      $("#enviar").click(function (event) {
+        event.preventDefault(); // Previene el envío por defecto del formulario
+
+        // Selecciona los campos por su ID y verifica si están vacíos
+        var nombre = $("#nombre").val().trim();
+        var asunto = $("#asunto").val().trim();
+        var mensaje = $("#mensaje").val().trim();
+
+        // Si alguno de los campos está vacío, muestra una alerta y no envía el formulario
+        if (nombre === "" || asunto === "" || mensaje === "") {
+          alert("Por favor, completa todos los campos del formulario.");
+        } else {
+          $("#formulario-contacto")[0].reset();
+          // Aquí se muestra el modal de confirmación
+          new bootstrap.Modal(document.getElementById('modalConfirmacion')).show();
+        }
+      });
+    });
+  </script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
