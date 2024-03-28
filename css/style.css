@@ -141,28 +141,49 @@ label {
 
 .btn-personalizado {
   background-color: #449CA6;
-  /* Azul */
   color: white;
-  /* Texto blanco */
   border: none;
-  /* Sin bordes */
   padding: 10px 20px;
-  /* Espaciado interno */
   text-align: left;
-  /* Alineación del texto */
   display: inline-block;
-  /* Permite la alineación */
   margin: 10px 0;
-  /* Margen para no pegarse a otros elementos */
   cursor: pointer;
-  /* Cambia el cursor para indicar clic */
+
 }
 
-/* Estilo para el hover (cuando el mouse está encima) */
 .btn-personalizado:hover {
   background-color: #35797B;
-  /* Un azul más oscuro para el efecto hover */
 }
+
+.footer-social {
+  background-color: #449CA6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #dddddd;
+}
+
+.fa-brands {
+  font-size: 1.5rem;
+
+}
+
 
 /* Media Queries */
 
